@@ -50,10 +50,15 @@ body { font: 100% Open Sans, Helvetica, sans-serif; margin: 0; padding: 0; }
 
 header { background: #f7f7f7; max-width: 1200px; width: 100%; margin: 0 auto; }
 
-main { background: #f7f7f7; max-width: 1200px; width: 100%; margin: 0 auto; }
-main.index article { position: relative; width: 100%; height: auto; }
+main { max-width: 1200px; width: 100%; margin: 0 auto; padding: 1em; }
+main.index { display: flex; flex-direction: row; flex-wrap: wrap; height: auto; }
+main.index article { background: none; flex: 100% 1; position: relative; margin-bottom: -5px; }
+main.index article.first, main.index article.featured { flex: 100% 1; }
 main.index article img { width: 100%; height: auto; }
-main.index article header { background: none; position: absolute; width: 100%; height: 100%%; display: flex; }
-main.index article header h1 { color: #f7f7f7; margin: auto; }
+main.index article header { background: none; position: absolute; width: 100%; height: 100%; display: flex; -webkit-transition: 200ms; -moz-transition: 200ms; -o-transition: 200ms; transition: 200ms; }
+main.index article header h1 { font-size: 11.2px; font-size: 0.7rem; color: black; margin-left: 0; margin-bottom: 10%; margin-top: auto; margin-right: auto; border-radius: 0 0.2em 0.2em 0; background: white; padding-top: 0.3em; padding-bottom: 0.3em; padding-left: 1em; padding-right: 1em; }
+main.index article header:hover { background: rgba(0, 0, 0, 0.5); }
 
 footer { max-width: 1200px; width: 100%; margin: 0 auto; background: #f7f7f7; }
+
+@media screen and (min-width: 50em) { main.index article { flex: 50% 1; } }
