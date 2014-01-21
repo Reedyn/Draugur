@@ -1,0 +1,74 @@
+@import "compass/reset";
+@include global-reset;
+@import 'mixins';
+
+$white: #fff;
+$light: #f7f7f7;
+$dark: #666;
+$black: #000;
+$font: Open Sans, Helvetica, sans-serif;
+
+@import 'formatting';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1;
+}
+
+body {
+    font: 100% $font;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: $light;
+    @include wrapper(1200px);
+}
+
+main {
+    background: $light;
+    @include wrapper(1200px);
+    &.index {
+        article {
+            position:relative;
+            width: 100%;
+            height: auto;
+            &.first, &.featured{
+                
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            header {
+                background: none;
+                position: absolute;
+                width: 100%;
+                height: 100%%;
+                display: flex;
+                h1 {
+                    color: $light;
+                    margin: auto;
+                } 
+            }
+            
+        }
+    }
+    &.post, &.page {
+        
+    }
+    
+}
+footer {
+    @include wrapper(1200px);
+    background: $light;
+}
+
+@media screen and (min-width: 50em) {
+    
+}

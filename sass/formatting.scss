@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5 {
+    font-family: $font;
+}
+
+h1 {
+    @include rem-size(3);
+}
+h2 {
+    @include rem-size(2);
+}
+h3 {
+    @include rem-size(1.5);
+}
+h4 {
+    @include rem-size(1);
+}
