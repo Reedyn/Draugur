@@ -14,3 +14,12 @@ h3 {
 h4 {
     @include rem-size(1);
 }
+
+a {
+    text-decoration:none;
+    color: $font-color;
+    @include transition(200ms);
+    &:hover {
+        color: $hover-font-color;
+    }
+}

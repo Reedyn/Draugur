@@ -32,6 +32,8 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
+@font-face { font-family: CC Icons; src: url(../fonts/cc-icons.ttf); }
+
 h1, h2, h3, h4, h5 { font-family: Open Sans, Helvetica, sans-serif; }
 
 h1 { font-size: 48px; font-size: 3rem; }
@@ -42,23 +44,56 @@ h3 { font-size: 24px; font-size: 1.5rem; }
 
 h4 { font-size: 16px; font-size: 1rem; }
 
+a { text-decoration: none; color: #333333; -webkit-transition: 200ms; -moz-transition: 200ms; -o-transition: 200ms; transition: 200ms; }
+a:hover { color: #4183c4; }
+
 * { box-sizing: border-box; }
 
 html { font-size: 16px; line-height: 1; }
 
-body { font: 100% Open Sans, Helvetica, sans-serif; margin: 0; padding: 0; }
+body { background: #f7f7f7; font: 100% Open Sans, Helvetica, sans-serif; margin: 0; padding: 0; }
 
-header { background: #f7f7f7; max-width: 1200px; width: 100%; margin: 0 auto; }
+header { display: flex; flex-direction: column; max-width: 1000px; width: 100%; margin: 0 auto; color: #aaaaaa; }
+header a { color: #aaaaaa; -webkit-transition: 200ms; -moz-transition: 200ms; -o-transition: 200ms; transition: 200ms; }
+header a:hover { color: #4183c4; }
+header .site-title { flex: 2; order: 1; text-align: center; line-height: 3em; font-size: 32px; font-size: 2rem; font-family: Sanchez, Rockwell, sans-serif; }
+header .site-title a { color: #333333; }
+header .site-title a:hover { color: #4183c4; }
+header nav.accounts { flex: 1; order: 2; text-align: center; }
+header nav.accounts ul li { font-size: 24px; font-size: 1.5rem; margin-bottom: 1em; display: inline-block; }
+header nav.accounts ul li.flickr a:hover { color: #ff0084; }
+header nav.accounts ul li.google-plus a:hover { color: #dd4b39; }
+header nav.site-menu { flex: 1; order: 3; text-align: center; }
+header nav.site-menu ul li { font-size: 16px; font-size: 1rem; margin-bottom: 1em; display: inline-block; }
+header nav.site-menu ul li::before { content: "/ "; }
+header nav.site-menu ul li:first-child::before { content: ""; }
 
-main { max-width: 1200px; width: 100%; margin: 0 auto; padding: 1em; }
+main { padding: 0.5em; max-width: 1000px; width: 100%; margin: 0 auto; }
 main.index { display: flex; flex-direction: row; flex-wrap: wrap; height: auto; }
-main.index article { background: none; flex: 100% 1; position: relative; margin-bottom: -5px; }
-main.index article.first, main.index article.featured { flex: 100% 1; }
-main.index article img { width: 100%; height: auto; }
-main.index article header { background: none; position: absolute; width: 100%; height: 100%; display: flex; -webkit-transition: 200ms; -moz-transition: 200ms; -o-transition: 200ms; transition: 200ms; }
-main.index article header h1 { font-size: 11.2px; font-size: 0.7rem; color: black; margin-left: 0; margin-bottom: 10%; margin-top: auto; margin-right: auto; border-radius: 0 0.2em 0.2em 0; background: white; padding-top: 0.3em; padding-bottom: 0.3em; padding-left: 1em; padding-right: 1em; }
-main.index article header:hover { background: rgba(0, 0, 0, 0.5); }
+main.index article { background-size: cover; flex: 100% 1; padding: 0.5em; }
+main.index article.latest, main.index article.featured { flex: 100% 1; }
+main.index article a { display: block; width: auto; padding-top: 50%; overflow: hidden; position: relative; }
+main.index article a img { position: absolute; top: 0; left: 0; right: 0; width: 100%; z-index: 0; }
+main.index article a header { z-index: 1; padding: 1em; background: none; position: absolute; top: 0; width: 100%; height: 100%; display: flex; -webkit-transition: 200ms; -moz-transition: 200ms; -o-transition: 200ms; transition: 200ms; text-align: center; }
+main.index article a header h1 { font-family: Sanchez, Rockwell, sans-serif; font-size: 32px; font-size: 2rem; color: black; margin: auto; padding-top: 0.3em; padding-bottom: 0.3em; padding-left: 1em; padding-right: 1em; }
+main.index article a header:hover { background: rgba(255, 255, 255, 0.5); }
 
-footer { max-width: 1200px; width: 100%; margin: 0 auto; background: #f7f7f7; }
+footer { overflow: auto; padding-top: 1em; padding-left: 2em; padding-right: 2em; padding-bottom: 2em; color: #aaaaaa; max-width: 1000px; width: 100%; margin: 0 auto; font-size: 12.8px; font-size: 0.8rem; line-height: 2rem; }
+footer .colophon { display: flex; flex-direction: column; margin: auto; text-align: center; }
+footer .colophon .copyright { flex: 2; order: 1; }
+footer .colophon .copyright .creative-commons::before { font-size: 150%; vertical-align: middle; font-family: CC Icons; content: " cbns"; }
+footer .colophon .poweredby { flex: 2; order: 2; }
 
-@media screen and (min-width: 50em) { main.index article { flex: 50% 1; } }
+@media screen and (min-width: 50em) { header { display: flex; flex-direction: row; }
+  header .site-title { flex: 1; order: 2; text-align: center; line-height: 3em; font-size: 32px; font-size: 2rem; font-family: Sanchez, Rockwell, sans-serif; }
+  header nav.accounts { flex: 1; order: 3; text-align: center; line-height: 3em; }
+  header nav.accounts ul li { font-size: 24px; font-size: 1.5rem; margin-bottom: 0; line-height: 4em; }
+  header nav.site-menu { flex: 1; order: 1; text-align: center; line-height: 3em; }
+  header nav.site-menu ul li { margin-bottom: 0; line-height: 6em; }
+  footer .colophon { flex-direction: row; }
+  footer .colophon .copyright { flex: 1; order: 1; text-align: center; line-height: 3em; }
+  footer .colophon .poweredby { flex: 1; order: 2; text-align: center; line-height: 3em; }
+  main.index article { flex: 50% 1; width: auto; }
+  main.index article a { padding-top: 50%; }
+  main.index article a header h1 { font-size: 48px; font-size: 3rem; }
+  main.index article.latest a, main.index article.featured a { padding-top: 25%; } }
