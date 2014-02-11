@@ -1,9 +1,18 @@
-h1, h2, h3, h4, h5 {
+body {
     font-family: $font;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: $font-header;
+}
+
 h1 {
-    @include rem-size(3);
+    text-align: center;
+}
+
+h1 {
+    @include rem-size(2);
+    font-weight: 700;
 }
 h2 {
     @include rem-size(2);
@@ -21,5 +30,27 @@ a {
     @include transition(200ms);
     &:hover {
         color: $hover-font-color;
+    }
+}
+
+p {
+    line-height: 150%;
+}
+
+@media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
+    h1 {
+        @include rem-size(2.5);
+    }
+}
+
+@media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
+    h1 {
+        @include rem-size(3);
+    }
+}
+
+@media screen and (min-width: $desktop-size){ // Desktop higher resolutions
+    h1 {
+        @include rem-size(4);
     }
 }

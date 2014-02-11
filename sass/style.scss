@@ -1,292 +1,43 @@
 @import "compass/reset";
-@import "compass/css3/transition";
+@import "compass/css3";
 @include global-reset;
 @import 'mixins';
-@font-face
-{
-font-family: CC Icons;
-src: url(../fonts/cc-icons.ttf);
+
+@font-face {
+    font-family: CC Icons;
+    src: url(../fonts/cc-icons.ttf);
 }
 
 $font-color: #333;
-$light-font-color: #aaa;
+$light-font-color: #D3D3D3;
+$border-color: #f7f7f7;
 $hover-font-color: #4183c4;
 $dark-font-color: #000;
-$background-color: #f7f7f7;
+$background-color: #fff;
 $font: Open Sans, Helvetica, sans-serif;
-$font-header: Sanchez, Rockwell, sans-serif;
-$wrapper-width: 1000px;
+$font-header: Rambla, sans-serif;
+$wrapper-width: 600px;
+$mobile-size: 25em;
+$tablet-size: 40em;
+$desktop-size: 65em;
 
 @import 'formatting';
+@import 'layout';
 
-* {
-    box-sizing: border-box;
+.creative-commons {
+    &::before {
+        font-size: 150%;
+        vertical-align:middle;
+        font-family: CC Icons;
+        content: " cbns";
+    }
 }
 
 html {
-    font-size: 16px;
-    line-height: 1;
+    height: 100%;
+    max-height: 100%;
 }
-
 body {
-    background: $background-color;
-    font: 100% $font;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    @include wrapper($wrapper-width);
-    color: $light-font-color;
-    
-    a {
-        color: $light-font-color;
-        @include transition(200ms);
-        &:hover {
-            color: $hover-font-color;
-        }
-    }
-    .site-title {
-        a {
-            color: $font-color;
-            &:hover {
-                color: $hover-font-color;
-            }
-        }
-        
-        flex: 2;
-        order: 1;
-        text-align:center;
-        line-height: 3em;
-        @include rem-size(2);
-        font-family: $font-header;
-    }
-    nav.accounts {
-        flex: 1;
-        order: 2;
-        text-align: center;
-        ul {
-            li {
-                @include rem-size(1.5);
-                margin-bottom: 1em;
-                display: inline-block;
-                &.flickr {
-                    a:hover {
-                        color: #ff0084;
-                    }
-                }
-                &.google-plus {
-                    a:hover {
-                        color: #dd4b39;
-                    }
-                }
-            }
-        }
-    }
-    nav.site-menu {
-        flex: 1;
-        order: 3;
-        text-align: center;
-        ul {
-            li {
-                @include rem-size(1);
-                margin-bottom: 1em;
-                display: inline-block;
-                &::before {
-                    content: "/ "
-                }
-                &:first-child {
-                    &::before {
-                        content: "";
-                    }
-                }
-            }
-        }
-    }
-}
-
-main {
-    padding: 0.5em;
-    @include wrapper($wrapper-width);
-    &.index {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
-        article {
-            background-size: cover;
-            flex: 100% 1;
-            
-            padding: 0.5em;
-            &.latest, &.featured{
-                flex: 100% 1;
-            }
-            a {
-                display: block;
-                width: auto;
-                padding-top: 50%;
-                overflow: hidden;
-                position: relative;
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100%;
-                    z-index:0;
-                }
-                header {
-                    z-index:1;
-                    padding: 1em;
-                    background: none;
-                    position: absolute;
-                    top:0;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    @include transition(200ms);
-                    text-align:center;
-                    h1 {
-                        font-family: $font-header;
-                        @include rem-size(2);
-                        color: $dark-font-color;
-                        margin: auto;
-                        padding: {
-                            top: 0.3em;
-                            bottom: 0.3em;
-                            left: 1em;
-                            right: 1em;
-                        };
-                    }
-                    &:hover {
-                        background: rgba(255,255,255,0.5);
-                    }
-                    
-                }
-            }
-            
-            
-        }
-    }
-    &.post, &.page {
-        
-    }
-    
-}
-footer {
-    overflow: auto;
-    padding: {
-        top: 1em;
-        left: 2em;
-        right: 2em;
-        bottom: 2em;
-    };
-
-    color: $light-font-color;
-    @include wrapper($wrapper-width);
-    @include rem-size(0.8);
-    line-height:2rem;
-    .colophon {
-        display:flex;
-        flex-direction:column;
-        margin: auto;
-        text-align:center;            
-        .copyright {
-            flex: 2;
-            order: 1;
-            .creative-commons {
-                &::before {
-                    font-size: 150%;
-                    vertical-align:middle;
-                    font-family: CC Icons;
-                    content: " cbns";
-                }
-            }
-        }
-        .poweredby {
-            flex: 2;
-            order: 2;
-        }
-    }
-}
-
-@media screen and (min-width: 50em) {
-    header {
-        display: flex;
-        flex-direction: row;
-        .site-title {
-            flex: 1;
-            order: 2;
-            text-align:center;
-            line-height: 3em;
-            @include rem-size(2);
-            font-family: $font-header;
-        }
-        nav.accounts {
-            flex: 1;
-            order: 3;
-            text-align: center;
-            line-height:3em;
-            ul {
-                li {
-                    @include rem-size(1.5);
-                    margin-bottom: 0;
-                    line-height:4em;
-                }
-            }
-        }
-        nav.site-menu {
-            flex: 1;
-            order: 1;
-            text-align: center;
-            line-height:3em;
-            ul {
-                li {
-                    margin-bottom: 0;
-                    line-height:6em;
-                }
-            }
-        }
-    }
-    footer {
-        
-        .colophon {
-           flex-direction: row;
-            .copyright {
-                flex: 1;
-                order: 1;
-                text-align:center;
-                line-height: 3em;
-            }
-            .poweredby {
-                flex: 1;
-                order: 2;
-                text-align: center;
-                line-height:3em;
-            } 
-        }   
-    }
-    main {
-        &.index {
-            article {
-                flex: 50% 1;
-                width: auto;
-                a {
-                    padding-top: 50%;
-                    header {
-                        h1 {
-                            @include rem-size(3);
-                        }
-                    }
-                }
-                &.latest, &.featured {
-                    a {
-                        padding-top: 25%;
-                    }
-                }
-            }
-        }
-    }
+    height: 100%;
+    max-height: 100%;
 }

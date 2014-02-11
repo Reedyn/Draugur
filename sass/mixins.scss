@@ -9,5 +9,12 @@
 }
 
 @mixin radius($radius) {
-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin navigation-list(){
+    list-style: none;
+    li {
+        display: inline-block;
+    }
 }
