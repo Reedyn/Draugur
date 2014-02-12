@@ -10,10 +10,14 @@ lib-cov
 pids
 logs
 results
-sass
 
 npm-debug.log
 node_modules
 
 Gruntfile.js
 package.json
+bild1.jpg
+bild2.jpg
+bild4.jpg
+bild5.jpg
+bild3.jpg
