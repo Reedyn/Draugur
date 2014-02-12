@@ -1,3 +1,5 @@
+@import 'github';
+
 body {
     font-family: $font;
     line-height: 150%;
@@ -71,7 +73,6 @@ pre {
     code {
         border-radius: 0;
         padding: 0;
-        background-color: none;
         border: none;
     }
 
@@ -102,10 +103,18 @@ strong {
 }
 
 blockquote {
+    margin: 1.5em 0;
     padding-left: 20px;
-    border-left: 4px solid #C2C2C2;
+    border-left: 4px solid #DDD;
+    color: #777;
     p {
         font-style: italic;
+    }
+}
+
+article {
+    *:last-child {
+    margin-bottom: 0 !important;
     }
 }
 
