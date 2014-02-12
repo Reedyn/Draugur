@@ -3,7 +3,6 @@ header.site-header {
         display: table;
         width: 100%;
         height: 60%;
-        margin-bottom: 5rem;
         text-align: center;
         color: #fff;
         background: #303538 no-repeat center center;
@@ -24,10 +23,15 @@ header.site-header {
             line-height: 4em;
             @include box-sizing(border-box);
             a.site-title {
+                color: $font-color;
+                text-decoration:none;
                 float: left;
                 font-family: $font-header;
                 font-weight: bold;
                 font-size: 1.3em;
+                &:hover {
+                    color: $hover-font-color;
+                }
             }
         }
     }
@@ -36,6 +40,14 @@ header.site-header {
         float: right;
         display: inline-block;
         @include navigation-list();
+        a {
+            text-decoration:none;
+            color: $font-color;
+            @include transition(200ms);
+            &:hover {
+                color: $hover-font-color;
+            }
+        }
         .gplus {
             a {
                 &:hover {
@@ -67,8 +79,13 @@ main {
     @include box-sizing(border-box);
     padding: 1.5em;
     &.index {
+        a {
+            color: $font-color;
+            text-decoration: none;
+            font-weight: 400;
+        }
         article.post {
-            margin: 2em 0;
+            margin: 3em 0;
             &:first-child {
                 margin-top: 0;
             }
@@ -87,6 +104,12 @@ main {
         article.content {
             header.post-meta {
                 margin-bottom: 3em;
+                .date {
+                    color: #A2A2A2;
+                    margin-top: 2em;
+                    display: block;
+                    text-align: center;
+                }
             }
         }
     }
@@ -119,6 +142,8 @@ footer {
     color: $light-font-color;
     a {
         color: $light-font-color;
+        text-decoration: none;
+        font-weight: 400;
     }
     section.colophon {
         text-align: center;
@@ -137,12 +162,15 @@ footer {
 }
 
 @media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
-    header.site-header {    
-        section.header-content {
-            padding: 0 2em;
+    header.site-header { 
+        &.compact {
+            section.header-content {
+                padding: 0 2em;
+            }
         }
     }
     main {
+        //width: 90%;
         padding: 2em;
         h1.post-title {
             width: 110%;
@@ -152,27 +180,29 @@ footer {
 }
 
 @media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
-    header.site-header {    
-        section.header-content {
-            padding: 0 2.5em;
+    header.site-header {
+        &.compact {
+            section.header-content {
+                padding: 0 2.5em;
+            }
         }
     }
     main {
+        //width: 70%;
         padding: 2.5em;
-        h1.post-title {
-            width: 120%;
-            margin-left: -10%;
-        }
     }
 }
 
 @media screen and (min-width: $desktop-size){ // Desktop higher resolutions
-    header.site-header {    
-        section.header-content {
-            padding: 0 3em;
+    header.site-header {  
+        &.compact {
+            section.header-content {
+                padding: 0 3em;
+            }
         }
     }
     main {
+        //width: 50%;
         padding: 3em;
         h1.post-title {
             width: 150%;
