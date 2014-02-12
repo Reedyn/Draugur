@@ -83,15 +83,20 @@ img {
 }
 
 ol {
-    list-style: decimal inside;
-    line-height: 1.5em;
+    list-style:decimal;
+    margin-left: 24px;
     li {
         margin: 0.5em 0;
     }
 }
 
 ul {
-    
+    margin-left: 18px;
+    list-style: square;
+    line-height: 1.5em;
+    li {
+        margin: 0.5em 0;
+    }  
 }
 
 em {
@@ -128,6 +133,9 @@ article {
 @media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
     blockquote {
         margin-left: -24px;
+    }
+    ul, ol {
+        margin-left: 0;
     }
     h1 {
         @include rem-size(3);

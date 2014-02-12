@@ -1,34 +1,31 @@
 header.site-header {
     &.cover {
-        display: table;
+        display: flex;
         width: 100%;
         height: 60%;
         text-align: center;
         color: #fff;
         background: #303538 no-repeat center center;
         background-size: cover;
-        .vertical {
-            display: table-cell;
-            vertical-align: middle;
-            section.header-content {
+        section.header-content {
+            margin: auto;
+            display: block;
+            @include box-sizing(border-box);
+            a.blog-title {
+                font-family: $font-header;
                 display: block;
-                @include box-sizing(border-box);
-                a.blog-title {
-                    font-family: $font;
-                    display: block;
-                    @include rem-size(4);
-                    line-height: 1.2em;
-                    color: white;
-                    &:hover {
-                        text-decoration: none;
-                    }
+                @include rem-size(4);
+                line-height: 1.2em;
+                color: white;
+                &:hover {
+                    text-decoration: none;
                 }
-                span.blog-description {
-                    @include rem-size(1.5);
-                    line-height: 1.3em;
-                    margin-top: 1em;
-                    display: block;
-                }
+            }
+            span.blog-description {
+                @include rem-size(1.5);
+                line-height: 1.3em;
+                margin-top: 1em;
+                display: block;
             }
         }
         nav.links {
@@ -68,7 +65,7 @@ header.site-header {
                 }
             }
             span.blog-description {
-                
+                display: none;
             }
         }
     }
@@ -77,6 +74,12 @@ header.site-header {
         float: right;
         display: inline-block;
         @include navigation-list();
+        ul {
+            line-height: 64px;
+            li {
+                margin: 0;
+            }
+        }
         a {
             text-decoration:none;
             color: $font-color;
@@ -129,7 +132,7 @@ main {
             &:last-child {
                 margin-bottom: 0;
             }
-            h1.post-title {
+            h1.post-title, h1.page-title {
                 margin-bottom: 0.5em;
             }
             p.post-excerpt {
@@ -139,7 +142,7 @@ main {
     
     &.post, &.page {
         article.content {
-            header.post-meta {
+            header.meta {
                 margin-bottom: 3em;
                 .date {
                     color: #A2A2A2;
@@ -209,7 +212,7 @@ footer {
     main {
         //width: 90%;
         padding: 2em;
-        h1.post-title {
+        h1.post-title, h1.page-title {
             width: 110%;
             margin-left: -5%;
         }
@@ -241,7 +244,7 @@ footer {
     main {
         //width: 50%;
         padding: 3em;
-        h1.post-title {
+        h1.post-title, h1.page-title {
             width: 150%;
             margin-left: -25%;
         }   
