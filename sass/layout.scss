@@ -9,7 +9,8 @@ header.site-header {
         background-size: cover;
         section.header-content {
             margin: auto;
-            display: block;
+            display: flex;
+            flex-direction: column;
             @include box-sizing(border-box);
             a.blog-title {
                 font-family: $font-header;
@@ -30,10 +31,9 @@ header.site-header {
         }
         nav.links {
             margin-top: 1em;
-            display: block;
-            float: none;
             @include rem-size(2);
             li {
+                margin: 0;
                 a {
                     color: white;
                     &:hover {
@@ -47,13 +47,16 @@ header.site-header {
         border-bottom: 2px solid $border-color;
         section.header-content {
             overflow: auto;
-            display: block;
+            display: flex;
+            flex-direction: column;
             max-width: $wrapper-width;
             padding: 0 1.5em;
             margin: 0 auto;
             line-height: 4em;
             @include box-sizing(border-box);
             a.blog-title {
+                margin: auto;
+                flex: 1;
                 color: $font-color;
                 text-decoration:none;
                 float: left;
@@ -67,15 +70,19 @@ header.site-header {
             span.blog-description {
                 display: none;
             }
+            nav.links {
+                text-align: right;
+            }
         }
     }
     nav.links {
+        margin: auto;
+        flex: 1;
         @include rem-size(1.2);
-        float: right;
-        display: inline-block;
         @include navigation-list();
         ul {
             line-height: 64px;
+            margin: 0;
             li {
                 margin: 0;
             }
@@ -206,6 +213,7 @@ footer {
         &.compact {
             section.header-content {
                 padding: 0 2em;
+                flex-direction:row;
             }
         }
     }

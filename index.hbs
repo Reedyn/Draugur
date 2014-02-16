@@ -1,10 +1,4 @@
     {{!< default}}
-
-    {{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
-
-    {{! The big featured header on the homepage, with the site logo and description }}
-
     <header class="site-header cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <section class="header-content">
             <a class="blog-title" href="/">{{@blog.title}}</a>
@@ -21,21 +15,15 @@
         </section>
     </header>
     
-    {{! The main content area on the homepage }}
     <main class="index" role="main">
-        
-        {{! Each post will be output using this markup }}
-        {{#foreach posts}}
+        {{#foreach posts ~}}
         <article class="post {{post_class}}">
             <a href="{{url}}">
                 <h1 class="post-title">{{{title}}}</h1>
                 <p class="post-excerpt">{{excerpt}}&hellip;</p>
             </a>
         </article>
-        {{/foreach}}
-        
-        {{!! After all the posts, we have the previous/next pagination links }}
-        {{pagination}}
-        
+        {{~/foreach}}
+        {{pagination}}        
     </main>
     

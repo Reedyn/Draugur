@@ -14,8 +14,7 @@
         </section>
     </header>
     <main class="page">
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+        {{#post ~}}
         <article class="content {{post_class}}">
             <header class="meta">
                 <h1 class="page-title">{{{title}}}</h1>
@@ -24,5 +23,5 @@
                 {{content}}
             </section>
         </article>
-        {{/post}}
+        {{~/post}}
     </main>
