@@ -1,7 +1,3 @@
-    {{!< default}}
-    <header class="site-header compact">
-        <section class="header-content">
-            <a class="blog-title" href="/">{{@blog.title}}</a>
             <nav class="links">
                 <ul>
                     <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li>
@@ -11,17 +7,3 @@
                     <li class="github"><a title="GitHub" href="http://github.com/reedyn"><i class="fa fa-fw fa-github-square"></i></a></li>
                 </ul>
             </nav>
-        </section>
-    </header>
-    <main class="page error">
-        {{#post ~}}
-        <article class="content {{post_class}}">
-            <header class="meta">
-                <h1 class="page-title">{{code}}</h1>
-            </header>
-            <section class="page-content">
-                {{message}}
-            </section>
-        </article>
-        {{~/post}}
-    </main>
