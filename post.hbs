@@ -1,0 +1,28 @@
+    {{!< default}}
+    <header class="site-header compact">
+        <section class="header-content">
+            <a class="blog-title" href="/">{{@blog.title}}</a>
+            <nav class="links">
+                <ul>
+                    <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li>
+                    <li class="twitter"><a title="Twitter" href="http://twitter.com/lindqvistgustav"><i class="fa fa-fw fa-twitter-square"></i></a></li>
+                    <li class="gplus"><a title="Google+" href="http://plus.google.com/u/0/+GustavLindqvist"><i class="fa fa-fw fa-google-plus-square"></i></a></li>
+                    <li class="flickr"><a title="Flickr" href="http://flickr.com/photos/gustavlindqvist"><i class="fa fa-fw fa-flickr"></i></a></li>
+                    <li class="github"><a title="GitHub" href="http://github.com/reedyn"><i class="fa fa-fw fa-github-square"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main class="post">
+        {{#post ~}}
+        <article class="content {{post_class}}">
+            <header class="meta">
+                <h1 class="post-title">{{{title}}}</h1>
+                <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+            </header>
+            <section class="post-content">
+                {{content}}
+            </section>
+        </article>
+        {{~/post}}
+    </main>

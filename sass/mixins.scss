@@ -1,0 +1,20 @@
+@mixin rem-size($rem) {
+    font-size: $rem*16+px; font-size: $rem+rem;
+}
+
+@mixin wrapper($site-width) {
+    max-width: $site-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin navigation-list(){
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+}
