@@ -133,6 +133,8 @@ main {
         }
         article.post {
             margin: 2em 0;
+            border-bottom: 2px solid #f7f7f7;
+            padding-bottom: 2em;
             &:first-child {
                 margin-top: 0;
             }
@@ -161,8 +163,7 @@ main {
         }
     }
     .pagination {
-        padding-top: 3em;
-        border-top: 1px solid #f7f7f7;
+        padding-top: 2em;
         width: 100%;
         position: relative;
         text-align: center;
