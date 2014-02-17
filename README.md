@@ -3,6 +3,8 @@ Draugur
 
 Ghost theme based on the default Casper theme and inspired by GitHub and Medium for a simple design focused on readability. Good for code.
 
+![](http://img.gustavlindqvist.se/20140216194503547.jpeg)
+
 ### [Download](https://github.com/reedyn/draugur/releases/download/v0.9.2/draugur.zip)
 
 ## Installation
