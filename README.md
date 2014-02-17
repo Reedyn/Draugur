@@ -5,7 +5,7 @@ Ghost theme based on the default Casper theme and inspired by GitHub and Medium 
 
 ![](http://img.gustavlindqvist.se/20140216194503547.jpeg)
 
-### [Download](https://github.com/reedyn/draugur/releases/download/v0.9.2/draugur.zip)
+### [Download](https://github.com/reedyn/draugur/releases/download/0.9.3/draugur.zip)
 
 ## Installation
 
