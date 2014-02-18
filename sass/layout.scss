@@ -126,12 +126,14 @@ main {
     @include box-sizing(border-box);
     padding: 1.5em;
     &.index {
-        a {
-            color: $font-color;
-            text-decoration: none;
-            font-weight: 400;
-            &:hover {
-                color: $hover-font-color;
+        .post-title, .pagination {
+            a {
+                color: $font-color;
+                text-decoration: none;
+                font-weight: 400;
+                &:hover {
+                    color: $hover-font-color;
+                }
             }
         }
         article.post {
