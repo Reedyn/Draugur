@@ -10,10 +10,8 @@
     <main class="index" role="main">
         {{#foreach posts ~}}
         <article class="post {{post_class}}">
-            <a href="{{url}}">
-                <h1 class="post-title">{{{title}}}</h1>
-                <p class="post-excerpt">{{excerpt}}&hellip;</p>
-            </a>
+            <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+            <p class="post-content">{{content}}</p>
         </article>
         {{~/foreach}}
         {{pagination}}        
