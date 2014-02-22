@@ -18,7 +18,7 @@ Draugur is responsive with a mobile first approach.
 #### Code Syntax Highlighting
 Draugur has Syntax highlighting using Highlight.js and GitHub's syntax colors.
 
-#### CDevelopment
+#### Development
 The following features are currently under development:
 
 * Featured images (using the {{content words=0}}-hack)
