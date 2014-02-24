@@ -147,7 +147,7 @@ main {
         }
         article.post {
             margin: 2em 0;
-            border-bottom: 2px solid #f7f7f7;
+            border-bottom: 2px solid $border-color;
             padding-bottom: 2em;
             &:first-child {
                 margin-top: 0;
@@ -163,7 +163,7 @@ main {
                 .date {
                     display: block;              
                     margin-top: 2em;
-                    color: #A2A2A2;
+                    color: $dark-grey;
                     text-align: center;
                 }
             }
@@ -177,7 +177,7 @@ main {
                 .date {
                     display: block;              
                     margin-top: 2em;
-                    color: #A2A2A2;
+                    color: $dark-grey;
                     text-align: center;
                 }
             }

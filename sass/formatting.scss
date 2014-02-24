@@ -55,7 +55,7 @@ p {
 code {
     border-radius: 3px;
     padding: 0 5px;
-    background-color: #f8f8f8;
+    background-color: $border-color;
     border: 1px solid #ddd;
     font-size: 13px;
     font-family: Source Code Pro, monospace;
@@ -63,7 +63,7 @@ code {
 
 pre {
     margin: 1.5em 0;
-    background-color: #f8f8f8;
+    background-color: $border-color;
     border: 1px solid #ddd;
     font-size: 13px;
     line-height: 19px;
