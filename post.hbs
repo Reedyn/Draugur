@@ -1,0 +1,21 @@
+    {{!< default}}
+    <header class="site-header compact">
+        <section class="header-content">
+            <a class="blog-title" href="/">{{@blog.title}}</a>
+            {{> links}}
+        </section>
+    </header>
+    <main id="main" class="post">
+        {{#post ~}}
+        <article class="content {{post_class}}">
+            <header class="meta">
+                <h1 class="post-title">{{{title}}}</h1>
+                <time class="timesince date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}">{{date format='D MMM YYYY'}}</time>
+            </header>
+            <section class="post-content">
+                {{content}}
+            </section>
+            {{> comments}}
+        </article>
+        {{~/post}}
+    </main>
