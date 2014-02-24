@@ -10,7 +10,10 @@
     <main id="main" class="index" role="main">
         {{#foreach posts ~}}
         <article class="{{post_class}}">
-            <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+            <header class="meta">
+                <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+                <time class="timesince date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}">{{date format='D MMM YYYY'}}</time>
+            </header>
             <section class="post-content">{{content}}</section>
         </article>
         {{~/foreach}}

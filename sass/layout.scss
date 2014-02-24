@@ -155,10 +155,17 @@ main {
             &:last-child {
                 margin-bottom: 0;
             }
-            h1.post-title, h1.page-title {
-                margin-bottom: 0.5em;
-            }
-            p.post-excerpt {
+            header.meta {
+                margin-bottom: 2em;
+                h1.post-title, h1.page-title {
+                    margin-bottom: 0.5em;
+                }
+                .date {
+                    display: block;              
+                    margin-top: 2em;
+                    color: #A2A2A2;
+                    text-align: center;
+                }
             }
         }    
     }
