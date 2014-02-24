@@ -3,11 +3,6 @@
 @include global-reset;
 @import 'mixins';
 
-@font-face {
-    font-family: CC Icons;
-    src: url(../fonts/cc-icons.ttf);
-}
-
 $font-color: #333;
 $light-font-color: #D3D3D3;
 $border-color: #f7f7f7;
@@ -25,21 +20,3 @@ $desktop-size: 65em;
 
 @import 'formatting';
 @import 'layout';
-
-.creative-commons {
-    &::before {
-        font-size: 150%;
-        vertical-align:middle;
-        font-family: CC Icons;
-        content: " cbns";
-    }
-}
-
-html {
-    height: 100%;
-    max-height: 100%;
-}
-body {
-    height: 100%;
-    max-height: 100%;
-}

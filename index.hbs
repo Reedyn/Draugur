@@ -7,11 +7,11 @@
         </section>
     </header>
     
-    <main class="index" role="main">
+    <main id="main" class="index" role="main">
         {{#foreach posts ~}}
-        <article class="post {{post_class}}">
+        <article class="{{post_class}}">
             <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
-            <p class="post-content">{{content}}</p>
+            <section class="post-content">{{content}}</section>
         </article>
         {{~/foreach}}
         {{pagination}}        

@@ -5,12 +5,12 @@
             {{> links}}
         </section>
     </header>
-    <main class="post">
+    <main id="main" class="post">
         {{#post ~}}
         <article class="content {{post_class}}">
             <header class="meta">
                 <h1 class="post-title">{{{title}}}</h1>
-                <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                <time class="timesince date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}">{{date format='D MMM YYYY'}}</time>
             </header>
             <section class="post-content">
                 {{content}}

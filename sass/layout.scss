@@ -1,6 +1,15 @@
+html {
+    height: 100%;
+    max-height: 100%;
+}
+body {
+    height: 100%;
+    max-height: 100%;
+}
+
 header.site-header {
     &.cover {
-        display: flex;
+        @include flexbox();
         width: 100%;
         height: 60%;
         text-align: center;
@@ -9,12 +18,12 @@ header.site-header {
         background-size: cover;
         section.header-content {
             margin: auto;
-            display: flex;
-            flex-direction: column;
+            @include flexbox();
+            @include flex-direction(column);
             @include box-sizing(border-box);
             a.blog-title {
-                font-family: $font-header;
                 display: block;
+                font-family: $font-header;
                 @include rem-size(2);
                 line-height: 1.2em;
                 color: white;
@@ -46,23 +55,23 @@ header.site-header {
     &.compact {
         border-bottom: 2px solid $border-color;
         section.header-content {
-            overflow: auto;
-            display: flex;
-            flex-direction: column;
             max-width: $wrapper-width;
             padding: 0 1.5em;
             margin: 0 auto;
-            line-height: 4em;
             @include box-sizing(border-box);
+            @include flexbox();
+            @include flex-direction(column);
+            overflow: auto;
+            line-height: 4em;
             a.blog-title {
-                margin: auto;
-                flex: 1;
-                color: $font-color;
-                text-decoration:none;
                 float: left;
+                @include flex(1);
+                margin: auto;
+                color: $font-color;  
                 font-family: $font-header;
                 font-weight: bold;
                 font-size: 1.3em;
+                text-decoration:none;  
                 &:hover {
                     color: $hover-font-color;
                 }
@@ -77,7 +86,7 @@ header.site-header {
     }
     nav.links {
         margin: auto;
-        flex: 1;
+        @include flex(1);
         @include rem-size(1.2);
         @include navigation-list();
         ul {
@@ -159,9 +168,9 @@ main {
             header.meta {
                 margin-bottom: 2em;
                 .date {
-                    color: #A2A2A2;
+                    display: block;              
                     margin-top: 2em;
-                    display: block;
+                    color: #A2A2A2;
                     text-align: center;
                 }
             }
@@ -199,12 +208,12 @@ footer {
         font-weight: 400;
     }
     section.colophon {
-        text-align: center;
         display: block;
         max-width: $wrapper-width;
         padding: 2em;
         margin: 0 auto;
         @include box-sizing(border-box);
+        text-align: center;
         section {
             margin-bottom: 0.5em;
             &:last-child {
@@ -234,19 +243,18 @@ footer {
         &.compact {
             section.header-content {
                 padding: 0 2em;
-                flex-direction:row;
+                @include flex-direction(row);
             }
         }
         &.cover {
             section.header-content {
                 a.blog-title {
-                @include rem-size(2.5);
+                    @include rem-size(2.5);
                 }
             }
         }
     }
     main {
-        //width: 90%;
         padding: 2em;
         h1.post-title, h1.page-title {
             width: 110%;
@@ -274,7 +282,6 @@ footer {
         }
     }
     main {
-        //width: 70%;
         padding: 2.5em;
     }
 }
@@ -295,7 +302,6 @@ footer {
         }
     }
     main {
-        //width: 50%;
         padding: 3em;
         h1.post-title, h1.page-title {
             width: 150%;
