@@ -166,7 +166,7 @@ main {
                 .date {
                     display: block;              
                     margin-top: 2em;
-                    color: $dark-grey;
+                    color: $grey;
                     text-align: center;
                 }
             }
@@ -180,7 +180,7 @@ main {
                 .date {
                     display: block;              
                     margin-top: 2em;
-                    color: $dark-grey;
+                    color: $grey;
                     text-align: center;
                 }
             }
@@ -205,6 +205,9 @@ main {
         .older-posts {
             position: absolute;
             right: 0;
+        }
+        .pagination-text {
+            display: none;
         }
     }
 }
@@ -269,6 +272,11 @@ footer {
         h1.post-title, h1.page-title {
             width: 110%;
             margin-left: -5%;
+        }
+    }
+    .pagination {
+        span.pagination-text {
+            display: inline;
         }
     }
 }
