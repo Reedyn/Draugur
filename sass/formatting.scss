@@ -38,12 +38,12 @@ h5 {
 
 a {
     text-decoration:none;
-    color: $hover-font-color;
+    color: $blue;
     font-weight: 700;
     @include transition(200ms);
     &:hover {
         text-decoration: underline;
-        color: $hover-font-color;
+        color: $blue;
     }
 }
 
@@ -55,16 +55,16 @@ p {
 code {
     border-radius: 3px;
     padding: 0 5px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: $lighter-grey;
+    border: 1px solid $light-grey;
     font-size: 13px;
     font-family: Source Code Pro, monospace;
 }
 
 pre {
     margin: 1.5em 0;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: $lighter-grey;
+    border: 1px solid $light-grey;
     font-size: 13px;
     line-height: 19px;
     overflow: auto;
@@ -112,7 +112,7 @@ strong {
 blockquote {
     margin: 1.5em 0;
     padding-left: 20px;
-    border-left: 4px solid #DDD;
+    border-left: 4px solid $light-grey;
     color: #777;
     p {
         font-style: italic;
