@@ -3,16 +3,18 @@
 @include global-reset;
 @import 'mixins';
 
-$font-color: #333;
-$light-font-color: #D3D3D3;
-$border-color: #f7f7f7;
-$hover-font-color: #4183c4;
-$dark-font-color: #000;
-$dark-grey: #A2A2A2;
-$background-color: #fff;
+$white: #fff;
+$lighter-grey: #f7f7f7;
+$light-grey: #D3D3D3;
+$grey: #A2A2A2;
+$dark-grey: #333;
+$black: #000;
+$blue: #4183c4;
+
 $font: Open Sans, Helvetica, sans-serif;
 $font-header: Rambla, sans-serif;
 $font-code: Source Code Pro, monospace;
+
 $wrapper-width: 700px;
 $mobile-size: 25em;
 $mobile-height: 37.5em;

@@ -13,8 +13,8 @@ header.site-header {
         width: 100%;
         height: 60%;
         text-align: center;
-        color: #fff;
-        background: #303538 no-repeat center center;
+        color: $white;
+        background: $dark-grey no-repeat center center;
         background-size: cover;
         section.header-content {
             margin: auto;
@@ -46,14 +46,14 @@ header.site-header {
                 a {
                     color: white;
                     &:hover {
-                        color: $hover-font-color;
+                        color: $blue;
                     }
                 }
             }
         }
     }
     &.compact {
-        border-bottom: 2px solid $border-color;
+        border-bottom: 2px solid $lighter-grey;
         section.header-content {
             max-width: $wrapper-width;
             padding: 0 1.5em;
@@ -67,13 +67,13 @@ header.site-header {
                 float: left;
                 @include flex(1);
                 margin: auto;
-                color: $font-color;  
+                color: $dark-grey;  
                 font-family: $font-header;
                 font-weight: bold;
                 font-size: 1.3em;
                 text-decoration:none;  
                 &:hover {
-                    color: $hover-font-color;
+                    color: $blue;
                 }
             }
             span.blog-description {
@@ -98,12 +98,13 @@ header.site-header {
         }
         a {
             text-decoration:none;
-            color: $font-color;
+            color: $dark-grey;
             @include transition(200ms);
             &:hover {
-                color: $hover-font-color;
+                color: $blue;
             }
         }
+        // Custom color for Google+ icon
         .gplus {
             a {
                 &:hover {
@@ -111,6 +112,7 @@ header.site-header {
                 }
             }  
         }
+        // Custom color for Twitter icon
         .twitter {
             a {
                 &:hover {
@@ -118,6 +120,7 @@ header.site-header {
                 }
             }   
         }
+        // Custom color for Flickr icon
         .flickr {
             a {
                 &:hover {
@@ -137,17 +140,17 @@ main {
     &.index {
         .post-title, .pagination {
             a {
-                color: $font-color;
+                color: $dark-grey;
                 text-decoration: none;
                 font-weight: 400;
                 &:hover {
-                    color: $hover-font-color;
+                    color: $blue;
                 }
             }
         }
         article.post {
             margin: 2em 0;
-            border-bottom: 2px solid $border-color;
+            border-bottom: 2px solid $lighter-grey;
             padding-bottom: 2em;
             &:first-child {
                 margin-top: 0;
@@ -188,9 +191,9 @@ main {
         width: 100%;
         position: relative;
         text-align: center;
-        color: $light-font-color;
+        color: $light-grey;
         i {
-            color: $light-font-color;
+            color: $light-grey;
         }
         .newer-posts {
             position: absolute;
@@ -207,10 +210,10 @@ main {
 }
 
 footer {
-    border-top: 2px solid $border-color;
-    color: $light-font-color;
+    border-top: 2px solid $lighter-grey;
+    color: $light-grey;
     a {
-        color: $light-font-color;
+        color: $light-grey;
         text-decoration: none;
         font-weight: 400;
     }
