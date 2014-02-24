@@ -206,6 +206,9 @@ main {
             position: absolute;
             right: 0;
         }
+        .pagination-text {
+            display: none;
+        }
     }
 }
 
@@ -269,6 +272,11 @@ footer {
         h1.post-title, h1.page-title {
             width: 110%;
             margin-left: -5%;
+        }
+    }
+    .pagination {
+        span.pagination-text {
+            display: inline;
         }
     }
 }
