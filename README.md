@@ -18,13 +18,14 @@ Draugur is responsive with a mobile first approach.
 #### Code Syntax Highlighting
 Draugur has Syntax highlighting using Highlight.js and GitHub's syntax colors.
 
+#### Optional Comments
+Draugur has comments through Disqus.
+
 #### Development
 The following features are currently under development:
 
-* Featured images (using the {{content words=0}}-hack)
-* Disqus comments
+* Featured images
 * Tags (not implemented right now as they aren't really being used by Ghost)
-* Date (With a time-since implementation)
 
 Ghost is still a work in progress with many features not yet implemented, as Ghost gets updated new features will be added to Draugur.
 
@@ -37,6 +38,25 @@ Ghost is still a work in progress with many features not yet implemented, as Gho
  5. Find the file called `footer.hbs`, also in the folder `partials`
  6. Edit the footer information if you so please.
  7. Follow the installation instructions for a theme in the official [Ghost Documentation](http://docs.ghost.org/themes/)
+
+### Adding comments (Disqus, although any comment-system should work)
+
+ 1. Find the file called `comments.hbs` in the `partials`-folder.
+ 2. Add the following code to the file:
+
+```html
+<section class="comments">            
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'yourdisqusshortnamehere';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</section> 
+```
 
 ## Screenshot
 
