@@ -41,9 +41,10 @@ Ghost is still a work in progress with many features not yet implemented, as Gho
 
 ### Adding comments (Disqus, although any comment-system should work)
 
- 1. Find the file called `comments.hbs` in the `partials`-folder.
- 2. Add the following code to the file:
+ 1. Find the file called `comments.hbs` in the `partials`-folder and the file called `post.hbs` in `root`.
+ 2. Add the following code to those files:
 
+#### comment.hbs
 ```html
 <section class="comments">            
     <div id="disqus_thread"></div>
@@ -58,6 +59,16 @@ Ghost is still a work in progress with many features not yet implemented, as Gho
 </section> 
 ```
 
+#### post.hbs
+```html
+            ...
+            <section class="post-content">
+                {{content}}
+            </section>
+            {{> comments}} <!-- Insert this line here -->
+        </article>
+        ...
+```
 ## Screenshot
 
 ![](http://gustavlindqvist.se/content/images/2014/Feb/draugur-example.png)
