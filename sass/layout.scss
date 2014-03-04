@@ -164,8 +164,7 @@ main {
                     margin-bottom: 0.5em;
                 }
                 .date {
-                    display: block;              
-                    margin-top: 2em;
+                    display: block;
                     color: $grey;
                     text-align: center;
                 }
@@ -190,7 +189,6 @@ main {
         }
     }
     .pagination {
-        padding-top: 2em;
         width: 100%;
         position: relative;
         text-align: center;
@@ -269,12 +267,17 @@ footer {
                 }
             }
         }
-    }
+    }      
     main {
         padding: 2em;
         h1.post-title, h1.page-title {
             width: 110%;
             margin-left: -5%;
+        }
+        &.index {
+            article.post {
+                margin: 2em 0;
+            }
         }
     }
     .pagination {
@@ -304,6 +307,11 @@ footer {
     }
     main {
         padding: 2.5em;
+        &.index {
+            article.post {
+                margin: 2.5em 0;
+            }
+        }
     }
 }
 
@@ -324,6 +332,11 @@ footer {
     }
     main {
         padding: 3em;
+        &.index {
+            article.post {
+                margin: 3em 0;
+            }
+        }
         h1.post-title, h1.page-title {
             width: 150%;
             margin-left: -25%;
