@@ -119,10 +119,19 @@ blockquote {
     }
 }
 
-.post-content {
-    *:last-child {
-    margin-bottom: 0 !important;
-    }
+q {
+    display: block;
+    width: 100%;
+    margin: {
+        left: 0;
+        top: 1.5em;
+        bottom: 1.5em;
+        right: 0;
+    };
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 130%;
+    text-align: center;      
 }
 
 @media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
@@ -135,6 +144,15 @@ blockquote {
 @media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
     blockquote {
         margin-left: -24px;
+    }
+    q {
+        width: 120%;
+        margin: {
+            left: -10%;
+            top: 1.5em;
+            bottom: 1.5em;
+            right: 0;
+        };  
     }
     ul, ol {
         margin-left: 0;
