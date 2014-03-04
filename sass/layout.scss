@@ -183,6 +183,21 @@ main {
                     text-align: center;
                 }
             }
+            section.byline {
+                span.author {
+                    color: $grey;
+                    font-weight: 300;
+                    a {
+                        color: $grey;
+                        font-weight: 300;
+                        font-style: italic;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
             section.comments {
                 margin-top: 3em;
             }
