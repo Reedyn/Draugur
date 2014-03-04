@@ -131,7 +131,14 @@ q {
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 130%;
-    text-align: center;      
+    text-align: center;
+    font-style: italic;
+    &::before {
+        content: "\201C";
+    }
+    &::after {
+        content: "\201D";
+    }
 }
 
 @media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
