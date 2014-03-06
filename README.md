@@ -1,4 +1,4 @@
-Draugur [![Gittip](http://img.shields.io/gittip/reedyn.svg)](https://www.gittip.com/Shields/) [![Built with Grunt](http://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Project Status](http://stillmaintained.com/reedyn/Draugur.png)](http://stillmaintained.com/reedyn/Draugur)
+Draugur [![Gittip](http://img.shields.io/gittip/reedyn.svg)](https://www.gittip.com/reedyn/) [![Built with Grunt](http://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Project Status](http://stillmaintained.com/reedyn/Draugur.png)](http://stillmaintained.com/reedyn/Draugur)
 =======
 
 Ghost theme based on the default Casper theme and inspired by GitHub and Medium for a simple design focused on readability. Good for code.
