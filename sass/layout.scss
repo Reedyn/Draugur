@@ -159,7 +159,6 @@ main {
                 margin-bottom: 0;
             }
             header.meta {
-                margin-bottom: 2em;
                 h1.post-title, h1.page-title {
                     margin-bottom: 0.5em;
                 }
@@ -175,12 +174,26 @@ main {
     &.post, &.page {
         article.content {
             header.meta {
-                margin-bottom: 2em;
                 .date {
                     display: block;              
                     margin-top: 2em;
                     color: $grey;
                     text-align: center;
+                }
+            }
+            section.byline {
+                span.author {
+                    color: $grey;
+                    font-weight: 300;
+                    a {
+                        color: $grey;
+                        font-weight: 300;
+                        font-style: italic;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
             section.comments {

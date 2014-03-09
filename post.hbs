@@ -1,20 +1,21 @@
     {{!< default}}
     <header class="site-header compact">
         <section class="header-content">
-            <a class="blog-title" href="/">{{@blog.title}}</a>
+            <a itemprop="name url" class="blog-title" href="/">{{@blog.title}}</a>
             {{> links}}
         </section>
     </header>
     <main id="main" class="post">
         {{#post ~}}
-        <article class="content {{post_class}}">
+        <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="content {{post_class}}">
             <header class="meta">
-                <h1 class="post-title">{{{title}}}</h1>
-                <time class="timesince date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}">{{date format='D MMM YYYY'}}</time>
+                <h1 class="post-title" itemprop="name headline">{{{title}}}</h1>
+                <time class="timesince date" itemprop="datePublished" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}">{{date format='D MMM YYYY'}}</time>
             </header>
-            <section class="post-content">
+            <section itemprop="articleBody text" class="post-content">
                 {{content}}
             </section>
+            {{> byline}}
         </article>
         {{~/post}}
     </main>

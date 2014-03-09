@@ -1,17 +1,17 @@
     {{!< default}}
     <header class="site-header compact">
         <section class="header-content">
-            <a class="blog-title" href="/">{{@blog.title}}</a>
+            <a itemprop="name url" class="blog-title" href="/">{{@blog.title}}</a>
             {{> links}}
         </section>
     </header>
     <main id="main" class="page">
         {{#post ~}}
-        <article class="content {{post_class}}">
+        <article itemscope itemtype="http://schema.org/WebPage" class="content {{post_class}}">
             <header class="meta">
-                <h1 class="page-title">{{{title}}}</h1>
+                <h1 itemprop="name headline" class="page-title">{{{title}}}</h1>
             </header>
-            <section class="page-content">
+            <section itemprop="text" class="page-content">
                 {{content}}
             </section>
         </article>
