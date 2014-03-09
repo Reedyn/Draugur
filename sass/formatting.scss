@@ -143,14 +143,23 @@ q {
     }
 }
 
-@media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
+@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions
     
     h1 {
         @include rem-size(2.5);
     }
+    q {
+        width: 110%;
+        margin: {
+            left: -5%;
+            top: 1.5em;
+            bottom: 1.5em;
+            right: 0;
+        };  
+    }
 }
 
-@media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
+@media screen and (min-width: $tablet-width){ // Tablet and higher resolutions
     blockquote {
         margin-left: -24px;
     }
@@ -171,7 +180,7 @@ q {
     }
 }
 
-@media screen and (min-width: $desktop-size){ // Desktop higher resolutions
+@media screen and (min-width: $desktop-width){ // Desktop higher resolutions
     h1 {
         @include rem-size(4);
     }
