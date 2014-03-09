@@ -143,7 +143,7 @@ q {
     }
 }
 
-@media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
+@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions
     
     h1 {
         @include rem-size(2.5);
@@ -159,7 +159,7 @@ q {
     }
 }
 
-@media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
+@media screen and (min-width: $tablet-width){ // Tablet and higher resolutions
     blockquote {
         margin-left: -24px;
     }
@@ -180,7 +180,7 @@ q {
     }
 }
 
-@media screen and (min-width: $desktop-size){ // Desktop higher resolutions
+@media screen and (min-width: $desktop-width){ // Desktop higher resolutions
     h1 {
         @include rem-size(4);
     }

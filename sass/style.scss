@@ -16,10 +16,12 @@ $font-header: Rambla, sans-serif;
 $font-code: Source Code Pro, monospace;
 
 $wrapper-width: 700px;
-$mobile-size: 25em;
+$mobile-width: 25em;
 $mobile-height: 37.5em;
-$tablet-size: 40em;
-$desktop-size: 65em;
+$tablet-width: 40em;
+$tablet-height: 45em;
+$desktop-width: 65em;
+$desktop-height: 60em;
 
 @import 'formatting';
 @import 'layout';

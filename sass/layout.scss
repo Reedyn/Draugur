@@ -11,7 +11,7 @@ header.site-header {
     &.cover {
         @include flexbox();
         width: 100%;
-        height: 60%;
+        height: 18.75em;
         text-align: center;
         color: $white;
         background: $dark-grey no-repeat center center;
@@ -34,12 +34,12 @@ header.site-header {
             span.blog-description {
                 @include rem-size(1.5);
                 line-height: 1.3em;
-                margin-top: 1em;
+                margin-top: 0;
                 display: block;
             }
         }
         nav.links {
-            margin-top: 1em;
+            margin-top: 0;
             @include rem-size(1.5);
             li {
                 margin: 0;
@@ -250,22 +250,23 @@ footer {
     }
 }
 
-@media screen and (max-height: $mobile-height){
+@media screen and (min-height: $mobile-height){
     header.site-header {
         &.cover {
+            height: 25em;
             section.header-content {
                 span.blog-description {
-                    margin-top: 0em;
+                    margin-top: 1em;
                 }
             }
             nav.links {
-                margin-top: 0em;
+                margin-top: 1em;
             }
         }
     }
 }
 
-@media screen and (min-width: $mobile-size){ // Mobile and higher resolutions
+@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions
     header.site-header { 
         &.compact {
             section.header-content {
@@ -300,7 +301,15 @@ footer {
     }
 }
 
-@media screen and (min-width: $tablet-size){ // Tablet and higher resolutions
+@media screen and (min-height: $tablet-height){
+    header.site-header {
+        &.cover {
+            height: 31.25em;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width){ // Tablet and higher resolutions
     header.site-header {
         &.compact {
             section.header-content {
@@ -328,7 +337,15 @@ footer {
     }
 }
 
-@media screen and (min-width: $desktop-size){ // Desktop higher resolutions
+@media screen and (min-height: $desktop-height){
+    header.site-header {
+        &.cover {
+            height: 37.5em;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width){ // Desktop higher resolutions
     header.site-header {  
         &.compact {
             section.header-content {
