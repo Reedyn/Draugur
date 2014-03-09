@@ -1,18 +1,18 @@
     {{!< default}}
     <header class="site-header cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <section class="header-content">
-            <a class="blog-title" href="/">{{@blog.title}}</a>
-            <span class="blog-description">{{@blog.description}}</span>
+            <a itemprop="name url" class="blog-title" href="/">{{@blog.title}}</a>
+            <span itemprop="description" class="blog-description">{{@blog.description}}</span>
             {{> links}}
         </section>
     </header>
     
     <main id="main" itemscope itemtype="http://schema.org/Blog" class="index" role="main">
         {{#foreach posts ~}}
-        <article itemscope itemtype="http://schema.org/BlogPosting" class="{{post_class}}">
+        <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="{{post_class}}">
             <header class="meta">
                 <h1 class="post-title" itemprop="name headline"><a href="{{url}}"  itemprop="url">{{{title}}}</a></h1>
-                <time class="timesince date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}" itemprop="datePublished">{{date format='D MMM YYYY'}}</time>
+                <time class="timesince date" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}" itemprop="datePublished">{{date format='D MMM YYYY'}}</time>
             </header>
             <section class="post-content" itemprop="articleBody text">{{content}}</section>
         </article>
