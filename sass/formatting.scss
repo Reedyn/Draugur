@@ -91,7 +91,12 @@ ol {
     margin-left: 24px;
     li {
         margin: 0.5em 0;
+        ol {
+            margin-left: 24px;
+            list-style: lower-alpha;
+        }
     }
+
 }
 
 ul {
@@ -100,11 +105,15 @@ ul {
     line-height: 1.5em;
     li {
         margin: 0.5em 0;
+        ul {
+            margin-left: 24px;
+            list-style: circle;
+        }
     }  
 }
 
 em {
-    font-style:italic;
+    font-style: italic;
 }
 
 strong {
