@@ -91,9 +91,14 @@ ol {
     margin-left: 24px;
     li {
         margin: 0.5em 0;
-        ol {
+        ul, ol {
             margin-left: 24px;
+        }
+        ol {
             list-style: lower-alpha;
+        }
+        ul {
+            list-style: square;
         }
     }
 
@@ -105,8 +110,13 @@ ul {
     line-height: 1.5em;
     li {
         margin: 0.5em 0;
-        ul {
+        ul, ol {
             margin-left: 24px;
+        }
+        ol {
+            list-style: decimal;
+        }
+        ul {
             list-style: circle;
         }
     }  
@@ -183,6 +193,11 @@ q {
     }
     ul, ol {
         margin-left: 0;
+        li {
+            ul, ol {
+                margin-left: 24px;
+            }
+        }
     }
     h1 {
         @include rem-size(3);
