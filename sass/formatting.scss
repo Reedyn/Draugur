@@ -81,9 +81,13 @@ pre {
 }
 
 img {
+    display: block;
     max-width: 100%;
-    width: 100%;
     height: auto;
+    margin: {
+        left: auto;
+        right: auto;
+    };
 }
 
 ol {
@@ -181,15 +185,6 @@ q {
 @media screen and (min-width: $tablet-width){ // Tablet and higher resolutions
     blockquote {
         margin-left: -24px;
-    }
-    q {
-        width: 120%;
-        margin: {
-            left: -10%;
-            top: 1.5em;
-            bottom: 1.5em;
-            right: 0;
-        };  
     }
     ul, ol {
         margin-left: 0;
