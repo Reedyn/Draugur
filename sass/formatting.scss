@@ -166,10 +166,12 @@ q {
     }
 }
 
-@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions
-    
+@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions  
     h1 {
         @include rem-size(2.5);
+        a {
+            @include rem-size(2.5);
+        }
     }
     q {
         width: 110%;
@@ -196,11 +198,17 @@ q {
     }
     h1 {
         @include rem-size(3);
+        a {
+            @include rem-size(3);
+        }
     }
 }
 
 @media screen and (min-width: $desktop-width){ // Desktop higher resolutions
     h1 {
         @include rem-size(4);
+        a {
+            @include rem-size(4);
+        }
     }
 }
