@@ -138,6 +138,12 @@ main {
     @include box-sizing(border-box);
     padding: 1.5em;
     &.index {
+        header.archive-heading {
+            text-align: center;
+            span {
+                color: $grey;
+            } 
+        }
         .post-title, .pagination {
             a {
                 color: $dark-grey;
@@ -162,11 +168,23 @@ main {
                 h1.post-title, h1.page-title {
                     margin-bottom: 0.5em;
                 }
-                .date {
+                span.post-data {
                     display: block;
                     color: $grey;
                     text-align: center;
+                    margin: 1em 0;
+                    .date {
+                        
+                    }
+                    .tags {
+                        a {
+                            color: $grey;
+                            text-underline: none;
+                            font-weight: 400;
+                        }
+                    }
                 }
+                
             }
         }    
     }
@@ -174,11 +192,21 @@ main {
     &.post, &.page {
         article.content {
             header.meta {
-                .date {
-                    display: block;              
-                    margin-top: 2em;
+                span.post-data {
+                    display: block;
                     color: $grey;
                     text-align: center;
+                    margin: 1em 0;
+                    .date {
+                        
+                    }
+                    .tags {
+                        a {
+                            color: $grey;
+                            text-underline: none;
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
             section.byline {

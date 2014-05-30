@@ -44,13 +44,10 @@ module.exports = function (grunt) {
             }
         }
     });
-
+    
     // Load tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    
-    // Change root
-    grunt.file.setBase('../')
     
     // Register Production
     grunt.registerTask('default', ['compass:dev','watch']);
