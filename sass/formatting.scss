@@ -81,9 +81,13 @@ pre {
 }
 
 img {
+    display: block;
     max-width: 100%;
-    width: 100%;
     height: auto;
+    margin: {
+        left: auto;
+        right: auto;
+    };
 }
 
 ol {
@@ -91,7 +95,17 @@ ol {
     margin-left: 24px;
     li {
         margin: 0.5em 0;
+        ul, ol {
+            margin-left: 24px;
+        }
+        ol {
+            list-style: lower-alpha;
+        }
+        ul {
+            list-style: square;
+        }
     }
+
 }
 
 ul {
@@ -100,11 +114,20 @@ ul {
     line-height: 1.5em;
     li {
         margin: 0.5em 0;
+        ul, ol {
+            margin-left: 24px;
+        }
+        ol {
+            list-style: decimal;
+        }
+        ul {
+            list-style: circle;
+        }
     }  
 }
 
 em {
-    font-style:italic;
+    font-style: italic;
 }
 
 strong {
@@ -143,10 +166,12 @@ q {
     }
 }
 
-@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions
-    
+@media screen and (min-width: $mobile-width){ // Mobile and higher resolutions  
     h1 {
         @include rem-size(2.5);
+        a {
+            @include rem-size(2.5);
+        }
     }
     q {
         width: 110%;
@@ -163,25 +188,27 @@ q {
     blockquote {
         margin-left: -24px;
     }
-    q {
-        width: 120%;
-        margin: {
-            left: -10%;
-            top: 1.5em;
-            bottom: 1.5em;
-            right: 0;
-        };  
-    }
     ul, ol {
         margin-left: 0;
+        li {
+            ul, ol {
+                margin-left: 24px;
+            }
+        }
     }
     h1 {
         @include rem-size(3);
+        a {
+            @include rem-size(3);
+        }
     }
 }
 
 @media screen and (min-width: $desktop-width){ // Desktop higher resolutions
     h1 {
         @include rem-size(4);
+        a {
+            @include rem-size(4);
+        }
     }
 }

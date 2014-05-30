@@ -8,6 +8,9 @@
     </header>
     
     <main id="main" class="index" role="main">
+        <header class="archive-heading">
+            <span>Showing posts tagged with <span itemprop="keywords">{{tag.name}}</span></span>
+        </header>
         {{#foreach posts ~}}
         <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="{{post_class}}">
             <header class="meta">
