@@ -90,10 +90,11 @@ img {
     };
 }
 
-.gallery {
-    width: 100%;
-    padding: 5px;
-    @include box-sizing(border-box);
+img.large {
+    max-width: 100%;
+    margin-left: 0;
+    max-width: calc(100% + 4em);
+    margin-left: calc(0px - 2em);
 }
 
 ol {
@@ -207,6 +208,10 @@ q {
         a {
             @include rem-size(3);
         }
+    }
+    img.large {
+        max-width: 120%;
+        margin-left: -10%;
     }
 }
 
