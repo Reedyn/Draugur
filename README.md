@@ -3,7 +3,7 @@ Draugur [![Gittip](http://img.shields.io/gittip/reedyn.svg)](https://www.gittip.
 
 Ghost theme based on the default Casper theme and inspired by GitHub and Medium for a simple design focused on readability. Good for code.
 
-### [Demo](http://gustavlindqvist.se) / [Download](https://github.com/reedyn/Draugur/releases/latest) / [Discussion](https://ghost.org/forum/themes/5427-draugur-minimalistic-theme)
+### [Download](https://github.com/reedyn/Draugur/releases/latest) / [Discussion](https://ghost.org/forum/themes/5427-draugur-minimalistic-theme)
 
 ## Features
 #### Cover page
