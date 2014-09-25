@@ -1,9 +1,9 @@
-Draugur [![Gittip](http://img.shields.io/gittip/reedyn.svg)](https://www.gittip.com/reedyn/) [![Built with Grunt](http://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Project Status](http://stillmaintained.com/reedyn/Draugur.png)](http://stillmaintained.com/reedyn/Draugur)
+Draugur [![Gittip](http://img.shields.io/gittip/reedyn.svg)](https://www.gittip.com/reedyn/) [![Built with Grunt](http://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Project Status](http://stillmaintained.com/Reedyn/Draugur.png)](http://stillmaintained.com/Reedyn/Draugur)
 =======
 
 Ghost theme based on the default Casper theme and inspired by GitHub and Medium for a simple design focused on readability. Good for code.
 
-### [Screenshot](https://github.com/Reedyn/Draugur#screenshot) / [Download](https://github.com/reedyn/Draugur/releases/latest) / [Discussion](https://ghost.org/forum/themes/5427-draugur-minimalistic-theme)
+### [Screenshot](https://github.com/Reedyn/Draugur#screenshot) / [Download](https://github.com/Reedyn/Draugur/releases/latest) / [Discussion](https://ghost.org/forum/themes/5427-draugur-minimalistic-theme)
 
 ## Features
 #### Cover page
