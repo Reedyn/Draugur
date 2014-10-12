@@ -219,10 +219,10 @@ kbd {
 
 @media screen and (min-width: $tablet-width){ // Tablet and higher resolutions
     blockquote {
-        margin-left: -24px;
+        margin-left: $lg-blockquote-margin-left;
     }
     ul, ol {
-        margin-left: 0;
+        margin-left: $lg-list-margin-left;
         li {
             ul, ol {
                 margin-left: 24px;
