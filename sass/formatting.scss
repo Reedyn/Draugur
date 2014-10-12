@@ -4,6 +4,7 @@ body {
     font-family: $font;
     line-height: 150%;
     font-size: 16px;
+    color: $font-color;
 }
 
 h1 {
@@ -38,12 +39,12 @@ h5 {
 
 a {
     text-decoration:none;
-    color: $blue;
+    color: $a-color;
     font-weight: 700;
     @include transition(200ms);
     &:hover {
         text-decoration: underline;
-        color: $blue;
+        color: $a-color-hover;
     }
 }
 
@@ -218,10 +219,10 @@ kbd {
 
 @media screen and (min-width: $tablet-width){ // Tablet and higher resolutions
     blockquote {
-        margin-left: -24px;
+        margin-left: $lg-blockquote-margin-left;
     }
     ul, ol {
-        margin-left: 0;
+        margin-left: $lg-list-margin-left;
         li {
             ul, ol {
                 margin-left: 24px;

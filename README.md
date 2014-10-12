@@ -47,6 +47,14 @@ Ghost is still a work in progress with many features not yet implemented, as Gho
  1. Find the file called `comments.hbs` in the `partials`-folder and the file called `post.hbs` in `root`.
  2. Add the following code to those files:
 
+### Customizing SASS/SCSS
+SASS can be customized by modifying the file `sass/custom.scss`.
+
+ 1. `git update-index --assume-unchanged sass/custom.scss`
+ 2. `git update-index --assume-unchanged assets/css/style.css`
+ 3. Edit the `custom.scss` file
+ 4. Run `grunt` to compile changes into `assets/css/style.css`
+
 #### comment.hbs
 ```html
 <section class="comments">            
