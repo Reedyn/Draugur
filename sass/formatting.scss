@@ -39,12 +39,12 @@ h5 {
 
 a {
     text-decoration:none;
-    color: $blue;
+    color: $a-color;
     font-weight: 700;
     @include transition(200ms);
     &:hover {
         text-decoration: underline;
-        color: $blue;
+        color: $a-color-hover;
     }
 }
 
